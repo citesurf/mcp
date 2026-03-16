@@ -1,0 +1,13 @@
+# general
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# secrets
+.env
+.env.*
+
+# claude
+.claude.local/
+.claude/settings.local.json
