@@ -2,8 +2,8 @@
   "name": "@citesurf/mcp",
   "version": "1.0.0",
   "description": "Citesurf MCP server for AI visibility monitoring",
-  "author": "Citesurf (https://citesurf.com)",
-  "homepage": "https://citesurf.com",
+  "author": "Citesurf (https://www.citesurf.com)",
+  "homepage": "https://www.citesurf.com",
   "license": "MIT",
   "repository": {
     "type": "git",

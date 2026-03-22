@@ -1,6 +1,6 @@
 # @citesurf/mcp
 
-MCP server for [Citesurf](https://citesurf.com). AI visibility monitoring.
+MCP server for [Citesurf](https://www.citesurf.com). AI visibility monitoring.
 
 Check if ChatGPT, Claude, Perplexity, and Gemini recommend any brand. Get visibility scores, sentiment, competitor data, and actionable insights, all from your AI agent.
 
@@ -64,10 +64,10 @@ claude mcp add citesurf -e CITESURF_API_KEY=cs_live_... -- npx -y @citesurf/mcp
 
 ### Environment Variables
 
-| Variable            | Required | Description                                    |
-| ------------------- | -------- | ---------------------------------------------- |
-| `CITESURF_API_KEY`  | Yes      | Your API key from Dashboard > Settings         |
-| `CITESURF_BASE_URL` | No       | API base URL (default: `https://citesurf.com`) |
+| Variable            | Required | Description                                        |
+| ------------------- | -------- | -------------------------------------------------- |
+| `CITESURF_API_KEY`  | Yes      | Your API key from Dashboard > Settings             |
+| `CITESURF_BASE_URL` | No       | API base URL (default: `https://www.citesurf.com`) |
 
 ## Tools
 
@@ -102,7 +102,7 @@ claude mcp add citesurf -e CITESURF_API_KEY=cs_live_... -- npx -y @citesurf/mcp
 | -------------- | ----------------------------------- | ------- |
 | `trigger_scan` | Trigger new scan for existing brand | 1       |
 
-Each scan costs 1 credit and runs across all 4 platforms (ChatGPT, Claude, Gemini, Perplexity). Reading data never costs credits. Purchase credit packs in the [Citesurf dashboard](https://citesurf.com).
+Each scan costs 1 credit and runs across all 4 platforms (ChatGPT, Claude, Gemini, Perplexity). Reading data never costs credits. Purchase credit packs in the [Citesurf dashboard](https://www.citesurf.com).
 
 ## Example Usage
 

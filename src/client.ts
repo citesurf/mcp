@@ -20,7 +20,7 @@ export class CitesurfClient {
 
   constructor(config: CitesurfClientConfig) {
     this.apiKey = config.apiKey;
-    this.baseUrl = (config.baseUrl ?? "https://citesurf.com").replace(
+    this.baseUrl = (config.baseUrl ?? "https://www.citesurf.com").replace(
       /\/$/,
       ""
     );
