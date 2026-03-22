@@ -1,5 +1,11 @@
 # @citesurf/mcp
 
+## 1.1.1
+
+### Patch Changes
+
+- d886ba5: Test release
+
 ## 1.1.0
 
 ### Minor Changes
