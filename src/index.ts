@@ -20,7 +20,7 @@ const apiKey = process.env.CITESURF_API_KEY;
 if (!apiKey) {
   process.stderr.write(
     "Error: CITESURF_API_KEY environment variable is required.\n" +
-      "Get your API key at https://citesurf.com → Dashboard → Settings.\n"
+      "Get your API key at https://www.citesurf.com → Dashboard → Settings.\n"
   );
   process.exit(1);
 }
