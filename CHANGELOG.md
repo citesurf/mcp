@@ -1,5 +1,11 @@
 # @citesurf/mcp
 
+## 1.1.2
+
+### Patch Changes
+
+- 7c42b73: Fixed release workflow
+
 ## 1.1.1
 
 ### Patch Changes
