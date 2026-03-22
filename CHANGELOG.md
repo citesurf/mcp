@@ -1,5 +1,11 @@
 # @citesurf/mcp
 
+## 1.1.3
+
+### Patch Changes
+
+- bc39320: Added tags on release
+
 ## 1.1.2
 
 ### Patch Changes
