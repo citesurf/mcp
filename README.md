@@ -64,9 +64,9 @@ claude mcp add citesurf -e CITESURF_API_KEY=cs_live_... -- npx -y @citesurf/mcp
 
 ### Environment Variables
 
-| Variable            | Required | Description                                    |
-| ------------------- | -------- | ---------------------------------------------- |
-| `CITESURF_API_KEY`  | Yes      | Your API key from Dashboard > Settings         |
+| Variable            | Required | Description                                        |
+| ------------------- | -------- | -------------------------------------------------- |
+| `CITESURF_API_KEY`  | Yes      | Your API key from Dashboard > Settings             |
 | `CITESURF_BASE_URL` | No       | API base URL (default: `https://www.citesurf.com`) |
 
 ## Tools
