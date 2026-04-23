@@ -1,5 +1,11 @@
 # @citesurf/mcp
 
+## 1.2.0
+
+### Minor Changes
+
+- b8659d6: Updated api endpoints adding personas and brand management
+
 ## 1.1.3
 
 ### Patch Changes
