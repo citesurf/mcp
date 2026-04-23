@@ -204,7 +204,9 @@ export function registerDataTools(server: McpServer, client: CitesurfClient) {
           .string()
           .min(1)
           .max(400)
-          .describe("Persona description (1-400 chars, 30-60 words recommended)"),
+          .describe(
+            "Persona description (1-400 chars, 30-60 words recommended)"
+          ),
       }),
     },
     async ({ brandId, personaId, name, description }) => {
