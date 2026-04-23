@@ -5,6 +5,7 @@ import type {
   AccountInfo,
   ApiResponse,
   InsightsResult,
+  PersonaRecord,
   PersonasResult,
   PromptsResult,
   Report,
@@ -178,6 +179,44 @@ export function registerDataTools(server: McpServer, client: CitesurfClient) {
         const result = await client.get<ApiResponse<PersonasResult>>(
           `/brands/${encId(brandId)}/personas?offset=${offset}&pageSize=${pageSize}`
         );
+        return jsonText(result.data);
+      } catch (err) {
+        return errorText(err);
+      }
+    }
+  );
+
+  server.registerTool(
+    "update_persona",
+    {
+      description:
+        "Update the name or description of a persona. Every brand has exactly 3 personas; you can edit them but not add or remove.",
+      annotations: { idempotentHint: true },
+      inputSchema: z.object({
+        brandId: z.string().describe("The brand ID"),
+        personaId: z.string().describe("The persona ID"),
+        name: z
+          .string()
+          .min(1)
+          .max(80)
+          .describe("Persona archetype name (1-80 chars)"),
+        description: z
+          .string()
+          .min(1)
+          .max(400)
+          .describe(
+            "Persona description (1-400 chars, 30-60 words recommended)"
+          ),
+      }),
+    },
+    async ({ brandId, personaId, name, description }) => {
+      try {
+        const result = await client.patch<
+          ApiResponse<{ persona: PersonaRecord }>
+        >(`/brands/${encId(brandId)}/personas/${encId(personaId)}`, {
+          name,
+          description,
+        });
         return jsonText(result.data);
       } catch (err) {
         return errorText(err);

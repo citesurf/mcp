@@ -106,7 +106,7 @@ export function registerBrandTools(server: McpServer, client: CitesurfClient) {
     "update_brand",
     {
       description:
-        "Update brand metadata: type, category, description, or monitoring prompts. All fields optional, only pass what you want to change.",
+        "Update brand metadata: type, category, description, monitoring prompts, or competitors. All fields optional, only pass what you want to change. Passing competitors replaces the full list.",
       annotations: { idempotentHint: true },
       inputSchema: z.object({
         brandId: z.string().describe("The brand ID to update"),
@@ -128,7 +128,25 @@ export function registerBrandTools(server: McpServer, client: CitesurfClient) {
           .array(z.string().min(5).max(200))
           .length(3)
           .optional()
-          .describe("Exactly 3 search prompts to monitor"),
+          .describe(
+            "Exactly 3 search prompts to monitor. The first letter of each prompt is automatically capitalized on save."
+          ),
+        competitors: z
+          .array(
+            z.object({
+              name: z.string().min(1).max(100).describe("Competitor name"),
+              website: z
+                .string()
+                .optional()
+                .describe("Competitor website (optional)"),
+            })
+          )
+          .min(1)
+          .max(5)
+          .optional()
+          .describe(
+            "Between 1 and 5 competitors. Names must be unique (case-insensitive). Sending the array replaces the full list; empty arrays are rejected. Omit to leave competitors unchanged."
+          ),
       }),
     },
     async ({ brandId, ...data }) => {

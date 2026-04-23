@@ -51,6 +51,15 @@ export interface Competitor {
   mentionCount: number;
 }
 
+export interface PersonaRecord {
+  id: string;
+  name: string;
+  description: string;
+  brandId: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface CitedDomain {
   domain: string;
   count: number;
